@@ -77,6 +77,12 @@ public class DetectLanguage {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         return gson.toJson(json);
     }
+    public static String prettifym(String json_text) {
+        JsonParser parser = new JsonParser();
+        JsonObject json = parser.parse(json_text).getAsJsonObject();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        return gson.toJson(json);
+    }
 
     public static void main (String[] args) {
         try {
